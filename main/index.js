@@ -8,7 +8,7 @@ app.set('view engine','hbs');
      // This function serves as the maintainence page that stops other localhost servers from executing.
     app.use((req,res,next)=>{
     res.render('maintainence.hbs',{
-        pageTitle:'The Site is currently being updated!'
+        pageTitle:'The Site is currently being updated! please be patient with us, we will be back shortly.'
     });
 
     });
@@ -48,7 +48,7 @@ app.set('view engine','hbs');
             });
         
 
-    const port=process.env.port||4000;
+    const port=process.env.PORT||4000;
     app.listen(port,()=>{
         console.log(`listening on port ${port}...`)
     });
